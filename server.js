@@ -1,11 +1,11 @@
 const express = require('express');
 const expressWinston = require('express-winston');
-
-const { addRoutes } = require('./routes');
+cors = require("cors");
+const { addRoutes } = require('./routes/routes');
 
 exports.createServer = function createServer({ logger }) {
   const api = express();
-
+  api.use(cors());
   // Log incoming requests
   api.use(expressWinston.logger({ meta: true, winstonInstance: logger }));
 
