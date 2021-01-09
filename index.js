@@ -1,5 +1,5 @@
-const { createLogger } = require('./lib/logger');
-const { createServer } = require('./lib/server');
+const { createLogger } = require('./logger/logger');
+const { createServer } = require('./server');
 
 const config = {
   host:     process.env.HOST || 'localhost',

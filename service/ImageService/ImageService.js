@@ -1,6 +1,6 @@
 const sharp = require('sharp');
-const { customErrorMessage } = require('./ErrorDictionary')
-const { createLogger } = require('./logger');
+const { customErrorMessage } = require('../../ErrorDictionary/ErrorDictionary')
+const { createLogger } = require('../../logger/logger');
 const logger = createLogger();
 
 const ImageService = {
