@@ -1,4 +1,7 @@
-FROM node:9-slim
+FROM node:12
 WORKDIR /app
+COPY package*.json ./
+RUN npm install
 COPY . /app
+EXPOSE 8080
 CMD ["npm", "run", "develop-docker"]
